@@ -1,0 +1,8 @@
+filename mymail email 'Joe.Developer@sas.com';
+data _null_;
+   file mymail
+      subject='Text Encoding'
+      attach=('C:\My Files\Test.out' 
+         content_type='text/plain' 
+         ); 
+run;

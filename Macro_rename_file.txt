@@ -1,0 +1,6 @@
+%macro rename();
+data _null_;
+rc=rename("oldname.xlsx", newname.csv", "file");
+put rc;
+run;
+%mend rename;

@@ -1,0 +1,15 @@
+export file excel file
+proc EXPORT DATA = dummy
+outfile  path -%sysfunc(putn("&sysdate9"d,date.)).xlsx"  
+dbms=xlsx REPLACE; RUN;
+
+
+export csv file 
+
+proc export 
+
+  data=out_valid
+  dbms=csv 
+  outfile="path/zzz-%sysfunc(putn("&sysdate9"d-1,date.)).csv"  
+  replace;label;
+run;

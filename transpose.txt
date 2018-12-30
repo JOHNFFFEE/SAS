@@ -1,0 +1,10 @@
+PROC TRANSPOSE DATA=qq
+	OUT=aa
+label=fields        <- label of columns
+	NAME=MONTH    <- label of row
+	prefix=_    <- prefix of "id" column
+;
+	BY zz;
+	ID MM;  <- show column data on row header 
+	VAR ISSUE ACTIVE; <-  show data in rows
+RUN; QUIT;

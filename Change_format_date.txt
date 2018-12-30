@@ -1,0 +1,19 @@
+data test;
+ dt=dhms('01Jan2017'd, 5, 2, 20);
+ format dt datetime20.;
+ 
+ date_formatted=datepart(dt);
+ format date_formatted yymmn6.;
+ 
+ x=put(datepart(dt), yymmn6.);
+ y=input(x, 8.);
+yymmdd10=put(datepart(dt), yymmdd10.);    --take part of date
+date9 =put(datepart(dt), date9.);
+
+UPDATE_DATE= put(date(), DDMMYY10.); --like to_char in oracle   
+run;
+ods select variables;
+proc contents data=test;
+run;
+proc print data=test;
+run;

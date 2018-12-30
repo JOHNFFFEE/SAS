@@ -1,0 +1,9 @@
+
+proc print data=exprev double noobs;
+  	   var country price sale_type;
+  	   title 'Monthly Price Per Unit and Sale Type for Each Country';
+   footnote '*prices in USD'; 
+run;
+
+
+

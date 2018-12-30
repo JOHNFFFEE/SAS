@@ -1,0 +1,10 @@
+proc sql;
+Connect to Oracle (user=xx password="xx" path=cc);
+Create Table TABLE_A as
+Select *
+From Connection to Oracle
+(
+Select * from xxx
+);
+Disconnect From Oracle;
+quit;

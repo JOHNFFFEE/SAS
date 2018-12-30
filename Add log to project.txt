@@ -1,0 +1,4 @@
+proc printto log='path/zz.log';
+   run;
+proc printto;
+run;
